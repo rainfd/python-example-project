@@ -5,8 +5,6 @@ VERSION="1.0"
 REQUIRE="requirements.txt"
 
 
-if [ -f $REQUIRE ]; then
-    pipenv lock -r >$REQUIRE
-fi
+test -f $REQUIRE || pipenv lock -r >$REQUIRE
 
 docker build . -t $APP:$VERSION
