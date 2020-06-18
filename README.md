@@ -99,7 +99,10 @@ Python 用于单元测试的框架有很多,但 Python 官方库就自带了一�
 
 在模块中只需要引入 logger 就可以正常输出日志
 
+
 ```python
 logger = logging.getLogger(__name__)
 logger.info("msg")
 ```
+
+****注意:当handler的filename文件路径不存在时,logging会报错,所以要先创建相关目录*

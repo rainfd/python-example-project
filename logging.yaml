@@ -1,4 +1,4 @@
-ggversion: 1
+version: 1
 disable_existing_loggers: true
 
 formatters:
